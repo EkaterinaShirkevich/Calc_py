@@ -15,20 +15,20 @@ while(True):
         case 1: 
             print('Калькулятор для работы с рациональными числами')
             console.Interface("Action")
-            i = input('Введите знак: ')
-            if i == "+": print("Результат: ", sum.get_sum(int(input("Введите первое число: ")), int(input("Введите второе число: "))))
-            elif i == "-": print("Результат: ",sub.get_sub(int(input("Введите первое число: ")), int(input("Введите второе число: "))))
+            i = ex.action()
+            if i == "+": print("Результат: ", sum.get_sum(ex.digit_number(), ex.digit_number()))
+            elif i == "-": print("Результат: ",sub.get_sub(ex.digit_number(), ex.digit_number()))
             elif i == "*": 
                 console.Interface("Mult")
                 i =int(input('Введите выбранный пункт:'))
-                print("Результат: ",mult.get_mult(int(input("Введите первое число: ")), int(input("Введите второе число: ")),i))
+                print("Результат: ",mult.get_mult(ex.digit_number(), ex.digit_number(),i))
             elif i == "/": 
                 console.Interface("Div")
                 i =int(input('Введите выбранный пункт:'))
-                print("Результат: ",div.get_div(int(input("Введите первое число: ")), int(input("Введите второе число: ")),i))
+                print("Результат: ",div.get_div(ex.digit_number(), ex.digit_number(),i))
             elif i == "5": 
                 console.Interface("End")
-                if(int(input('Введите выбранный пункт: ')) == 2): 
+                if(ex.digit() == 2): 
                     print("Программа завершила работу")
                     break
             
@@ -39,15 +39,14 @@ while(True):
         case 2:
             print('Калькулятор для работы с комплексными числами')
             console.Interface("Action")
-            i = ex.action(input('Введите знак: '))
-            if not i ==  False:
-                if i == '5': 
-                    print("Программа завершила работу")
-                    break
-                print(compl.cal_compl(i))
+            i = ex.action()
+            if i == '5': 
+                print("Программа завершила работу")
+                break
+            print(compl.cal_compl(i))
             
             console.Interface("End")
-            if(int(input('Введите выбранный пункт: ')) == 5): 
+            if(ex.digit() == 2): 
                 print("Программа завершила работу")
                 break
         case 3:
