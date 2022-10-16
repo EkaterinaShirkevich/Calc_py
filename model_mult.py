@@ -1,11 +1,4 @@
-x = 0
-y = 0
-
-def init(a, b):
-    global x
-    global y
-    x = a
-    y = b
-
-def get_mult():
-    return x * y 
+def get_mult(x,y,i):
+    if i == 1:return x * y 
+    elif i == 2: return x ** y
+    else: print("Вы вели неправильные данные")
