@@ -41,9 +41,13 @@ while(True):
             console.Interface("Action")
             i = ex.action(input('Введите знак: '))
             if not i ==  False:
-                   print(compl.cal_compl(i))
+                if i == '5': 
+                    print("Программа завершила работу")
+                    break
+                print(compl.cal_compl(i))
+            
             console.Interface("End")
-            if(int(input('Введите выбранный пункт: ')) == 2): 
+            if(int(input('Введите выбранный пункт: ')) == 5): 
                 print("Программа завершила работу")
                 break
         case 3:

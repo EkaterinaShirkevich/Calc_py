@@ -5,7 +5,7 @@ def mistake():
     
 
 def action(i):
-    ls =['+','-','*','/']
+    ls =['+','-','*','/','5']
     if not i in ls:
         console.Interface("Mistake")
         return False
