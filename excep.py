@@ -1,4 +1,3 @@
-from cgitb import text
 import user_interface as console
 import logg 
 
@@ -18,20 +17,31 @@ def action():
 
 def digit():
     while(True):
-        i = input("Введите выбраный пункт: ")
-        if i.isdigit(): return int(i)
+        i = input("Введите выбранный пункт: ")
+        if i.isdigit(): return float(i)
         console.Interface("Mistake")
+        print("Вам надо ввести число")
         text = "Пользователь ввел: " + i + ". Это некорректный ввод"
         logg.actions_logger(text)
+
+def zero_number():
+    while(True):
+        i = digit_number()
+        if i !=0 : return i
+        console.Interface("Mistake")
+        print("На ноль делить нельзя")
+        text = "Пользователь ввел: 0. Это некорректный ввод"
+        logg.actions_logger(text)
+
 
 def digit_number():
     while(True):
         i = input("Введите число: ")
-        if i.isdigit(): return int(i)
+        if i.isdigit(): return float(i)
         console.Interface("Mistake")
+        print("Вам надо ввести число")
         text = "Пользователь ввел: " + i + ". Это некорректный ввод"
         logg.actions_logger(text)
-
 
 
 
