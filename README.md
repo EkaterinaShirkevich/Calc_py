@@ -13,3 +13,5 @@
 * https://github.com/ostraleks - *промежуточное тестирование* 
 * https://github.com/IrinaSuvorova, https://github.com/Alexey1992Astakhov и https://github.com/Kosmonaft2007 - *контрольное тестирование* 
 * https://github.com/EkaterinaShirkevich - *менеджмент проекта, промежуточное тестирование, разработка (log, исправление мелких багов в других модулях)*
+
+*изменения можно предлагать в ветку new_changes*
